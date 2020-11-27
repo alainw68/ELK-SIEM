@@ -21,7 +21,6 @@ Wazuh Kibana plugin: 4.0.2-7.9.1
 ~~~
 To access the web interface:
 
-
 URL: https://<wazuh_server_ip>
 user: admin
 password: admin
