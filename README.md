@@ -26,7 +26,6 @@ What is Kibana?
 https://www.elastic.co/guide/en/kibana/current/introduction.html
 
 What is Wazuh? 
-
 https://documentation.wazuh.com/4.0/virtual-machine/virtual-machine.html#virtual-machine
 
 -----------------------
