@@ -2,6 +2,8 @@
 
 - Note: Information is taken from the website below:
 
+https://documentation.wazuh.com/4.0/virtual-machine/virtual-machine.html#virtual-machine
+
 Wazuh is a free, open source and enterprise-ready security monitoring solution for threat detection, integrity monitoring, incident response and compliance.
 
 This process is simple and easy to setup. All we have to do is import the **.ova** file into our Hypervisor and run the system.
