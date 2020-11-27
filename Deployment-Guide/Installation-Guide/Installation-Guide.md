@@ -425,5 +425,5 @@ Now you have a functional ELK-SIEM stack installed on your Ubuntu system. I reco
 
 Customize data streams with Logstash, use different Beats modules to gather various types of data, and utilize Kibana for easy browsing through log files.
 
-Note: Security of the devices is not setup, we will setup that process in the next Guide Named: **Security-Module**
+Security of the devices is not setup, we will setup that process in the next Guide Named: **Security-Module**
 https://github.com/watsoninfosec/ELK-SIEM/tree/main/Deployment-Guide/Security-Module
