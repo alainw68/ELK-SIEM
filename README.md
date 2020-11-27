@@ -61,5 +61,7 @@ You will need physical hardware to install.
 # Installation Guide ELK-SIEM Setup
 
 - Install Guide [Document](https://github.com/watsoninfosec/ELK-SIEM/tree/main/Deployment-Guide/Installation-Guide)
-- Security Configuration [Document](https://github.com/watsoninfosec/ELK-SIEM/tree/main/Deployment-Guide/Security-Module)
+- Security Configuration Guide [Document](https://github.com/watsoninfosec/ELK-SIEM/tree/main/Deployment-Guide/Security-Module)
+
+- Wazuh Install Guide [Document](https://github.com/watsoninfosec/ELK-SIEM/tree/main/Deployment-Guide/Wazuh-Guide)
 -----------------------
