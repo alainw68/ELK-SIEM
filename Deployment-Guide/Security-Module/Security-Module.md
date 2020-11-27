@@ -129,3 +129,9 @@ Note: Copy the user names and document them for safe keeping, because you will n
 Once this process is setup you will now a secure setup of Elasticseach + Kiban ELK-SIEM.
 
 ## Now you can login and explore!
+
+# Conclusion
+
+We now have our security features enabled and working, so at this point you can navigate to the: **Wazuh Setup Guide** 
+https://github.com/watsoninfosec/ELK-SIEM/blob/main/Deployment-Guide/Wazuh-Guide/Setup-Guide.md
+
