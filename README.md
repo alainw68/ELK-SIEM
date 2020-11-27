@@ -19,11 +19,15 @@ I am trying to make this process simple are straight to the point. So that you c
 
 -----------------------
 
-- What is Elasticsearch? [Docs](https://www.elastic.co/guide/en/elasticsearch/reference/current/elasticsearch-intro.html)
+What is Elasticsearch?
+https://www.elastic.co/guide/en/elasticsearch/reference/current/elasticsearch-intro.html
 
-- What is Kibana? [Docs](https://www.elastic.co/guide/en/kibana/current/introduction.html)
+What is Kibana?
+https://www.elastic.co/guide/en/kibana/current/introduction.html
 
-- What is Wazuh? [Docs](https://documentation.wazuh.com/4.0/virtual-machine/virtual-machine.html#virtual-machine)
+What is Wazuh? 
+
+https://documentation.wazuh.com/4.0/virtual-machine/virtual-machine.html#virtual-machine
 
 -----------------------
 
@@ -32,7 +36,7 @@ I am trying to make this process simple are straight to the point. So that you c
 
 - Hosting Server Software 
 
-- ubuntu Server 18.04 & 20.04 LTS [Downloads](https://ubuntu.com/download/server)
+- ubuntu Server 18.04 & 20.04 LTS **#Option 3**  https://ubuntu.com/download/server
 
 - The Hypervisor that you use is up to you but, process is still the same.
 - You can use linux or windows for the base hypervisor install.
@@ -41,29 +45,29 @@ I am trying to make this process simple are straight to the point. So that you c
 -----------------------
 - Windows or Linux Installs
 
-- Oracle VirtualBox 6.1.16 [Downloads](https://www.virtualbox.org/wiki/Downloads)
+- Oracle VirtualBox 6.1.16 https://www.virtualbox.org/wiki/Downloads
 
-- Oracle VirtualBox Guest Extension Pack [Downloads](https://download.virtualbox.org/virtualbox/6.1.16/Oracle_VM_VirtualBox_Extension_Pack-6.1.16.vbox-extpack)
+- Oracle VirtualBox Guest Extension Pack https://download.virtualbox.org/virtualbox/6.1.16/Oracle_VM_VirtualBox_Extension_Pack-6.1.16.vbox-extpack
 
 -----------------------
 - Windows or Linux Installs
 
-- VMware Workstation 16.1.0 Player Free [Downloads](https://my.vmware.com/en/web/vmware/downloads/details?downloadGroup=PLAYER-1610&productId=1039&rPId=55792)
+- VMware Workstation 16.1.0 Player Free https://my.vmware.com/en/web/vmware/downloads/details?downloadGroup=PLAYER-1610&productId=1039&rPId=55792
 
 These two are optional below.
 You will need physical hardware to install.
 
-- Vmware ESXI 6.7.OU3B [Downloads](https://my.vmware.com/en/web/vmware/downloads/details?downloadGroup=ESXI67U3B&productId=742&rPId=56014)
+- Vmware ESXI 6.7.OU3B https://my.vmware.com/en/web/vmware/downloads/details?downloadGroup=ESXI67U3B&productId=742&rPId=56014
 
-- Vmware ESXI 7.0 [Downloads](https://my.vmware.com/web/vmware/evalcenter?p=free-esxi7)
+- Vmware ESXI 7.0 https://my.vmware.com/web/vmware/evalcenter?p=free-esxi7
 
 -----------------------
 # Installation Guide ELK-SIEM Setup
 
-- Install Guide [Document](https://github.com/watsoninfosec/ELK-SIEM/tree/main/Deployment-Guide/Installation-Guide)
+- Install Guide https://github.com/watsoninfosec/ELK-SIEM/tree/main/Deployment-Guide/Installation-Guide
 
-- Security Configuration Guide [Document](https://github.com/watsoninfosec/ELK-SIEM/tree/main/Deployment-Guide/Security-Module)
+- Security Configuration Guide https://github.com/watsoninfosec/ELK-SIEM/tree/main/Deployment-Guide/Security-Module
 
-- Wazuh Install Guide [Document](https://github.com/watsoninfosec/ELK-SIEM/tree/main/Deployment-Guide/Wazuh-Guide)
+- Wazuh Install Guide https://github.com/watsoninfosec/ELK-SIEM/tree/main/Deployment-Guide/Wazuh-Guide
 
 -----------------------
