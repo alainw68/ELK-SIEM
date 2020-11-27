@@ -6,7 +6,7 @@ These documents are going to show you how I setup my ELK-SIEM + Wazuh workstatio
 
 -----------------------
 
-- Note: This process was setup on a VMware ESXI 6.7.OU3B  and these machines are running 24/7. 
+- This process was setup on a VMware ESXI 6.7.OU3B  and these machines are running 24/7. 
 - Now if you wanna use that process then this setup guide is still the same.
 
 -----------------------
