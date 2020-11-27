@@ -25,7 +25,73 @@ I have listed some install steps below to help you re-create the same install bu
 
 Note: Just make sure you have SSH access enabled once the server install is completed and know the IP address of the machine. Or that you can login through the GUI and open a Terminal.
 
-## Installation of utilities
+Note: To configure a static IP address on your Ubuntu 18.04 & 20.04 LTS server you need to modify a relevant netplan network configuration file within **/etc/netplan/** directory.
+
+- Configure a static IP address:
+
+~~~
+cd  /etc/netplan/
+ls
+~~~
+
+Once you change into this directory and list the contents. We will need to look for our interface name.
+
+- Display network info:
+
+~~~
+ifconfig -v
+~~~
+
+- Copy the name and clear the screen:
+
+~~~
+clear
+~~~
+
+Look for you interface name mines was **enp1s0** and change you values to match you network card info:
+
+- You should see a file like this one:
+
+~~~
+00-installer-config.yaml
+~~~
+
+- Now edit this file:
+
+~~~
+sudo nano 00-installer-config.yaml
+~~~
+
+- Just modify the content with your data:
+
+~~~
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp1s0:
+     dhcp4: no
+     addresses: [192.168.0.25/24]
+     gateway4: 192.168.0.1
+     nameservers:
+       addresses: [8.8.8.8,8.8.4.4]
+~~~
+
+- Once that is done restart services:
+
+~~~
+sudo netplan apply
+~~~
+
+- In case you run into some issues execute:
+
+~~~
+sudo netplan --debug apply
+~~~
+
+- Remember your new IP assignement!
+
+## Installation of System Components
 
 The ELK stack requires Java 8 to be installed. Some components are compatible with Java 9, but not Logstash
 
@@ -101,7 +167,7 @@ sudo systemctl daemon-reload
 
 ## Configure Elasticsearch
 
-Elasticsearch uses a configuration file called **.yml** to control how it behaves. Open the configuration file for in a text editor of your choice.Either nano or vi.
+Elasticsearch uses a configuration files called **.yml** to control how it behaves. Open the configuration file in a text editor of your choice.Either nano or vi.
  **We will be using nano**:
 
 ~~~
@@ -130,16 +196,16 @@ discovery.type: single-node
 sudo systemctl start elasticsearch.service
 ~~~
 
-- No verify that the service is running:
+- Now verify that the service is running:
 ~~~
 sudo service elasticsearch status
 ~~~
 
-This may take some time for the serivce to run, but once it does we will need to check that it is installed.
+This may take some time for the serivce to run and verify, but once it does we will need to check that it is installed.
 
-- Type this command in:
+- Type this command in your browser:
 ~~~
-http://my_ip_address_here://9200
+http://my_ip_address_here:9200
 ~~~
 
 Once you hit enter you shoud see something like this:
@@ -164,7 +230,7 @@ Once you hit enter you shoud see something like this:
 }
 ~~~
 
-This means that the system in running Elasticsearch and it has been installed. Now lets enable it run on boot.
+This means that the system in running Elasticsearch and it has been installed. Now lets enable it to run on boot.
 
 - Enable Elasticsearch to start on boot:
 
@@ -196,22 +262,171 @@ sudo apt-get install kibana -y
 sudo nano /etc/kibana/kibana.yml
 ~~~
 
+- Delete the (#) sign at the beginning of the following lines to activate them:
+
+~~~
+server.port: 5601
+server.host: “my_ip_address_here”
+elasticsearch.hosts: [“http://my_ip_address_here:9200”]
+~~~
+
+- The above-mentioned lines should look as follows:
+
+~~~
+server.port: 5601
+server.host: “192.168.0.25”
+elasticsearch.hosts: [“http://192.168.0.25:9200”]
+~~~
+
+- Save the file (Ctrl+o) and exit (Ctrl+ x).
+
+Note: This configuration allows traffic from the same system Elasticstack is configured on. You can set the server.host value to the address of a remote server or this server. This is where it will connect to!
+
+- Start and Enable Kibana service.
+~~~
+sudo systemctl start kibana
+~~~
+
+If there is no output, then the service was started correctly.
+
+- Next, configure Kibana to launch at boot:
+~~~
+sudo systemctl enable kibana
+~~~
+
+Allow Traffic on Port 5601
+If UFW firewall is enabled on your Ubuntu system, you need to allow traffic on port 5601 to access the Kibana dashboard.
+
+- First check if the firewall is running:
+~~~
+sudo ufw status verbose
+~~~
+- If it is not then you can skip this line, but it won't hurt to add it. I did!
+
+~~~
+sudo ufw allow 5601/tcp
+~~~
+
+- To access Kibana, open a web browser and browse to the following address:
+
+~~~
+http://192.168.0.25:5601
+~~~
+
+Note: If you receive a **"Kibana server not ready yet"** error, check if the Elasticsearch and Kibana services are active.
+
+~~~
+sudo systemctl status kibana
+sudo systemctl status elasticsearch
+~~~
+
+- If the services are not running then you will need to restart or start the services with these commands:
+
+~~~
+sudo systemctl restart kibana
+sudo systemctl restart elasticsearch
+~~~
+
+- Double check again and you should be ok now!
 
 
+## Configure Logstash
 
+Logstash is a tool that collects data from different sources. That data it collected and parsed by Kibana and stored in Elasticsearch.
 
+- Install Logstash by running the following command:
 
-## Output Samples in PDF format
+~~~
+sudo apt-get install logstash -y
+~~~
 
-### Article style
+- Start Logstash:
 
-![Article](img/article.pdf.png)
+~~~
+sudo systemctl start logstash
+~~~
 
-### Document style
+- Enable the Logstash service:
 
-![Document](img/document.pdf.png)
+~~~
+sudo systemctl enable logstash
+~~~
 
-### Keynotes style
+If everything goes correct and Logstash was installed, the service should be running.
 
-![Keynotes](img/keynotes.pdf.png)
+- Check to see if Logstash is running:
 
+~~~
+sudo systemctl status logstash
+~~~
+
+Once that service is running then it is installed.
+
+## Configure Filebeat
+
+Filebeat is a lightweight plugin used to collect and ship log files. It is the most commonly used Beats module. One of Filebeat’s major advantages is that it slows down its pace if the Logstash service is overwhelmed with data.
+
+- Install Filebeat by running the following command:
+
+~~~
+sudo apt-get install filebeat -y
+~~~
+
+Note: Make sure that the Kibana service is up and running during the installation and configuration procedure.
+
+- Configure Filebeat:
+
+~~~
+sudo nano /etc/filebeat/filebeat.yml
+~~~
+
+Under the Elasticsearch output section, search for the commented out lines:
+
+~~~
+output.elasticsearch:
+hosts: ["localhost:9200"]
+~~~
+
+- remove the (#) sign and edit the line with your system IP address.
+
+- It should look like this:
+
+~~~
+output.logstash
+hosts: ["192.168.0.25:5044"]
+~~~
+
+Next, enable the Filebeat system module, which will examine local system logs:
+
+~~~
+sudo filebeat modules enable system
+~~~
+
+Note: Remeber to change **localhost** with you system IP addresss!
+- Next, load the index template:
+
+~~~
+sudo filebeat setup --index-management -E output.logstash.enabled=false -E 'output.elasticsearch.hosts=["192.168.0.25:9200"]'
+~~~
+
+The system will do some work on setting it up.
+
+- Start and enable the Filebeat service:
+
+~~~
+sudo systemctl start filebeat
+sudo systemctl enable filebeat
+~~~
+
+- Verify Elasticsearch Reception of Data:
+
+~~~
+curl -XGET http://192.168.0.25:9200/_cat/indices?v
+~~~
+
+Conclusion
+Now you have a functional ELK-SIEM stack installed on your Ubuntu system. I recommend defining your requirements and start adjusting your ELK-SIEM for your needs. This powerful monitoring tool can be customized for individual use cases.
+
+Customize data streams with Logstash, use different Beats modules to gather various types of data, and utilize Kibana for easy browsing through log files.
+
+Note: Security of the devices is not setup, we will setup that process in the next Guide Named: **Security-Module**
