@@ -26,7 +26,7 @@ Kibana: 7.9.1
 Wazuh Kibana plugin: 4.0.2-7.9.1
 ~~~
 
-- First, import the OVA in the virtualization platform and run the virtual machine. The user root password is wazuh and the username/password for the Wazuh API is wazuh-wui/wazuh-wui.
+First, import the OVA in the virtualization platform and run the virtual machine. The user root password is wazuh and the username/password for the Wazuh API is wazuh-wui/wazuh-wui.
 
 Note: You will need to login into the system and get the IP address from the server.
 
