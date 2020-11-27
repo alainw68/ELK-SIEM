@@ -420,7 +420,7 @@ sudo systemctl enable filebeat
 curl -XGET http://192.168.0.25:9200/_cat/indices?v
 ~~~
 
-##Conclusion
+## Conclusion
 Now you have a functional ELK-SIEM stack installed on your Ubuntu system. I recommend defining your requirements and start adjusting your ELK-SIEM for your needs. This powerful monitoring tool can be customized for individual use cases.
 
 Customize data streams with Logstash, use different Beats modules to gather various types of data, and utilize Kibana for easy browsing through log files.
