@@ -1,14 +1,18 @@
 # Wazuh Open Source Security Platform
 
-- Note: Information is taken from the website below:
+Note: Information is taken from the website below:
 
+- Welcome to Wazuh
+https://documentation.wazuh.com/4.0/index.html
+
+- Virtual Machine (OVA)
 https://documentation.wazuh.com/4.0/virtual-machine/virtual-machine.html#virtual-machine
 
 Wazuh is a free, open source and enterprise-ready security monitoring solution for threat detection, integrity monitoring, incident response and compliance.
 
 This process is simple and easy to setup. All we have to do is import the **.ova** file into our Hypervisor and run the system.
 
-- Virtual Appliance:
+- Virtual Appliance (OVA):
 - https://packages.wazuh.com/4.x/vm/wazuh-4.0.2_1.11.0.ova
 
 ~~~
