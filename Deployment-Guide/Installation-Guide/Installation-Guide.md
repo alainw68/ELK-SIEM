@@ -376,7 +376,7 @@ Note: Make sure that the Kibana service is up and running during the installatio
 sudo nano /etc/filebeat/filebeat.yml
 ~~~
 
-Under the Elasticsearch output section, search for the commented out lines:
+- Under the Elasticsearch output section, search for the commented out lines:
 
 ~~~
 output.elasticsearch:
@@ -392,7 +392,7 @@ output.logstash
 hosts: ["192.168.0.25:5044"]
 ~~~
 
-Next, enable the Filebeat system module, which will examine local system logs:
+- Next, enable the Filebeat system module, which will examine local system logs:
 
 ~~~
 sudo filebeat modules enable system
