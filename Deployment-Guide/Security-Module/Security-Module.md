@@ -125,3 +125,7 @@ elasticsearch.password: "oZdTyaMMxCLaNmaW9udf"
 This will create the system users for the login.
 
 Note: Copy the user names and document them for safe keeping, because you will need these names later in your setup.
+
+Once this process is setup you will now a secure setup of Elasticseach + Kiban ELK-SIEM.
+
+## Now you can login and explore!
