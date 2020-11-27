@@ -58,3 +58,8 @@ Vmware ESXI 6.7.OU3B [Downloads](https://my.vmware.com/en/web/vmware/downloads/d
 Vmware ESXI 7.0 [Downloads](https://my.vmware.com/web/vmware/evalcenter?p=free-esxi7)
 
 -----------------------
+# Installation Guide ELK-SIEM Setup
+
+- Install Guide [Document](https://github.com/watsoninfosec/ELK-SIEM/tree/main/Deployment-Guide/Installation-Guide)
+- Security Configuration [Document](https://github.com/watsoninfosec/ELK-SIEM/tree/main/Deployment-Guide/Security-Module)
+-----------------------
