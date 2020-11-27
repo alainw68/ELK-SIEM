@@ -1,7 +1,3 @@
-# ELK-SIEM Deployment Guide
-
-- Creating an Elasticsearch + Kibana SIEM. 
-
 # Install Guide & Build Instructions
 
 This setup guide will show you how to create an Elasticsearch + Kibana ELK-SIEM.
