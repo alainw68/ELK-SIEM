@@ -133,30 +133,30 @@ wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add
 
 - The system should respond with OK.
 
-Next, install the apt-transport-https package:
+- Next, install the apt-transport-https package:
 
 ~~~
 sudo apt-get install apt-transport-https -y
 ~~~
 
-Now add the Elastic repository to your system’s repository list:
+- Now add the Elastic repository to your system’s repository list:
 ~~~
 echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-7.x.list
 ~~~
 
-Prior to installing Elasticsearch, update the repositories by entering:
+- Prior to installing Elasticsearch, update the repositories by entering:
 
 ~~~
 sudo apt-get update -y
 ~~~
 
-Install Elasticsearch with the following command:
+- Install Elasticsearch with the following command:
 
 ~~~
 sudo apt-get update && sudo apt-get install elasticsearch -y
 ~~~
 
-Do a systemctl daemon reload.
+- Do a systemctl daemon reload.
 ~~~
 sudo systemctl daemon-reload
 ~~~
