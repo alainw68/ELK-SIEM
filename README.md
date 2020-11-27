@@ -42,14 +42,14 @@ https://documentation.wazuh.com/4.0/index.html
 
 
 -----------------------
-- Windows or Linux Installs
+- VirtualBox for Windows or Linux Installs
 
 - Oracle VirtualBox 6.1.16 https://www.virtualbox.org/wiki/Downloads
 
 - Oracle VirtualBox Guest Extension Pack https://download.virtualbox.org/virtualbox/6.1.16/Oracle_VM_VirtualBox_Extension_Pack-6.1.16.vbox-extpack
 
 -----------------------
-- Windows or Linux Installs
+- VMware for Windows or Linux Installs
 
 - VMware Workstation 16.1.0 Player Free https://my.vmware.com/en/web/vmware/downloads/details?downloadGroup=PLAYER-1610&productId=1039&rPId=55792
 
