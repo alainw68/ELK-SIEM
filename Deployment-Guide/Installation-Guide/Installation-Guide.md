@@ -7,8 +7,8 @@ I have listed some install steps below to help you re-create the same install bu
 ## Requirements
 
 - **Ubuntu** 18.04 or 20.04 LTS Linux distribution.
-- **Java** 8 openjdk-8-jdk.
-- **Git repository** ppa:git-core/ppa
+- **Java** 8
+- **Git repository**
 - **Elastic repository** 
 - **kibana repository**
 - **Putty or SSH Terminal**
