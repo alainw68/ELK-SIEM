@@ -183,6 +183,11 @@ http.port: 9200
 
 - Uncomment the lines by deleting the hash (#) sign at the beginning of both lines and replace **localhost** with you ip address.
 
+~~~
+network.host: 192.168.0.25
+http.port: 9200
+~~~
+
 - Just below, find the Discovery section. We are adding one more line, as we are configuring a single node cluster:
 
 ~~~
