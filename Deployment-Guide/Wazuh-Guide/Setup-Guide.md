@@ -63,4 +63,4 @@ We now have our working Wazuh system setup so that we can start our journey and 
 
 ### Congratulations You Did IT!
 
-#Enjoy!
+# Enjoy!
