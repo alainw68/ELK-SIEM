@@ -64,7 +64,7 @@ This is just to change the name from default if you want to.
 Note: You must change the values to match the location path of the certs.
 
 
-Now lets edit the Kibana.yml & elasticsearch.yml files and add this security feature at the end of the file::
+Now lets edit the Kibana.yml & elasticsearch.yml files and add this security feature at the end of the file:
 
 - Security Feature:
 
