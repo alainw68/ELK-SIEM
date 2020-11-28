@@ -104,7 +104,11 @@ sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 ~~~
 
-- Now lets reboot the system and finish our deployment.
+- Now lets reboot the system and finish our deployment:
+
+~~~
+sudo reboot
+~~~
 
 Note: Lets check your Java version to see if it is installed, enter the following:
 
