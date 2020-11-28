@@ -76,10 +76,11 @@ server.ssl.certificate: /ca/ca.crt
 server.ssl.key: /ca/ca.key
 ~~~
 
-- Now restart Kibana:
+- Now restart Kibana & Elasticsearch:
 
 ~~~
 sudo systemctl restart kibana
+sudo systemctl restart elasticsearch
 ~~~
 
 
