@@ -267,7 +267,7 @@ sudo apt-get install kibana -y
 sudo nano /etc/kibana/kibana.yml
 ~~~
 
-- Delete the (#) sign at the beginning of the following lines to activate them:
+- Delete the (#) sign at the beginning of the following lines to activate them and replace the values with your IP:
 
 ~~~
 server.port: 5601
