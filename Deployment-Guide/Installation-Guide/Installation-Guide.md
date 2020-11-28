@@ -46,7 +46,7 @@ clear
 
 Look for you interface name mines was **enp1s0** and change you values to match you network card info:
 
-- You should see a file like this one:
+- You should see a file like this one after you list the directory contents:
 
 ~~~
 00-installer-config.yaml
