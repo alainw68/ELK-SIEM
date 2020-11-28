@@ -51,6 +51,8 @@ cd /
 
 At this point once the cert has been unzipped you can change the name by copying the file into another file.
 
+This is just to change the name from default if you want to.
+
 - Example:
 
 ~~~
@@ -59,9 +61,26 @@ sudo cp ca.crt mycertname.crt
 sudo cp ca.key mycertname.key
 ~~~
 
-This is just to change the name from default if you want to.
+- Lets go back and edit this file again:
+~~~
+sudo nano /etc/kibana/kibana.yml
+~~~
 
-Note: You must change the values to match the location path of the certs.
+Now uncomment (#) hash signs and edit the values below to match your values you created.
+
+- Change the values to match the location path of the certs you created:
+
+~~~
+server.ssl.enabled: true
+server.ssl.certificate: /ca/ca.crt
+server.ssl.key: /ca/ca.key
+~~~
+
+- Now restart Kibana:
+
+~~~
+sudo systemctl restart kibana
+~~~
 
 
 Now lets edit the Kibana.yml & elasticsearch.yml files and add this security feature at the end of the file:
@@ -86,25 +105,6 @@ sudo systemctl restart kibana
 ~~~
 
 
-- Lets go back and edit this file again:
-~~~
-sudo nano /etc/kibana/kibana.yml
-~~~
-
-- Now uncomment (#) hash signs and edit the values below to match your values you created.
-
-
-~~~
-server.ssl.enabled: true
-server.ssl.certificate: /ca/ca.crt
-server.ssl.key: /ca/ca.key
-~~~
-
-- Now restart Kibana:
-
-~~~
-sudo systemctl restart kibana
-~~~
 
 Once that is done we must create the system default users to be able to login and create our own username for access.
 
