@@ -246,7 +246,7 @@ sudo systemctl enable elasticsearch.service
 - You can also test Elasticsearch by running this command:
 
 ~~~
-curl –X GET “my_ip_address_here:9200”
+curl –X GET "192.168.0.25:9200"
 ~~~
 
 - Now that we have Elasticsearch install and running, lets install Kibana.
