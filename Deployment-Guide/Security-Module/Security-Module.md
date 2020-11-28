@@ -54,6 +54,7 @@ At this point once the cert has been unzipped you can change the name by copying
 - Example:
 
 ~~~
+cd ca/
 sudo cp ca.crt mycertname.crt
 sudo cp ca.key mycertname.key
 ~~~
