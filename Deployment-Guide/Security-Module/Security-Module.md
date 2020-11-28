@@ -139,7 +139,7 @@ sudo systemctl restart kibana
 
 Note: Copy the user names and document them for safe keeping, because you will need these names later in your setup.
 
-Once this process is setup you will now a secure setup of Elasticseach + Kiban ELK-SIEM.
+Once this process is setup you will now a secure setup of Elasticseach + Kibana ELK-SIEM.
 
 - You can login with the user: **elastic**
 -Then follow this guide:
