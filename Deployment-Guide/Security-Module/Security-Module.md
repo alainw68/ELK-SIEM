@@ -107,7 +107,7 @@ sudo systemctl restart kibana
 
 
 
-Once that is done we must create the system default users to be able to login and create our own username for access.
+Once that is done we must create the system default users to be able to login and create our own username for access. Copy these logins to a secure place.
 
 - Run these command to create system users:
 
