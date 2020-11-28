@@ -181,7 +181,7 @@ network.host: localhost
 http.port: 9200
 ~~~
 
-- Uncomment the lines by deleting the hash (#) sign at the beginning of both lines and replace **localhost** with you ip address.
+- Uncomment the lines by deleting the hash (#) sign at the beginning of both lines and replace **localhost** with you ip address. Save with CTRL + x
 
 ~~~
 network.host: 192.168.0.25
