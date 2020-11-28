@@ -288,6 +288,7 @@ elasticsearch.hosts: [“http://192.168.0.25:9200”]
 Note: This configuration allows traffic from the same system Elasticstack is configured on. You can set the server.host value to the address of a remote server or this server. This is where it will connect to!
 
 - Start and Enable Kibana service.
+
 ~~~
 sudo systemctl start kibana
 ~~~
@@ -295,8 +296,15 @@ sudo systemctl start kibana
 If there is no output, then the service was started correctly.
 
 - Next, configure Kibana to launch at boot:
+
 ~~~
 sudo systemctl enable kibana
+~~~
+
+- Check to see if the service is running:
+
+~~~
+sudo systemctl status kibana
 ~~~
 
 Allow Traffic on Port 5601
