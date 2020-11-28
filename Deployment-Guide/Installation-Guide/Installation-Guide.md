@@ -271,8 +271,8 @@ sudo nano /etc/kibana/kibana.yml
 
 ~~~
 server.port: 5601
-server.host: “my_ip_address_here”
-elasticsearch.hosts: [“http://my_ip_address_here:9200”]
+server.host: "192.168.0.25"
+elasticsearch.hosts: ["http://192.168.0.25:9200"]
 ~~~
 
 - The above-mentioned lines should look as follows:
