@@ -30,7 +30,7 @@ cd  /etc/netplan/
 ls
 ~~~
 
-Once you change into this directory and list the contents. We will need to look for our interface name.
+Once you change into this directory and list the contents. We will need to look for our interface name. Remember to copy that Interface name, you will need it later.
 
 - Display network info:
 
