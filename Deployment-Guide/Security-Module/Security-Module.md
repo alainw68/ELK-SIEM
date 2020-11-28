@@ -109,7 +109,7 @@ Once that is done we must create the system default users to be able to login an
 
 ~~~
 cd /usr/share/elasticsearch/bin
-./elasticsearch-setup-passwords auto
+sudo ./elasticsearch-setup-passwords auto
 ~~~
 
 - Now we must go back again and add our elastic user login creds:
