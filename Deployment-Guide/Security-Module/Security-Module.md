@@ -141,6 +141,12 @@ Note: Copy the user names and document them for safe keeping, because you will n
 
 Once this process is setup you will now a secure setup of Elasticseach + Kiban ELK-SIEM.
 
+- You can login with the user: **elastic**
+-Then follow this guide:
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/get-started-users.html
+
+
 ## Now you can login and explore!
 
 # Conclusion
