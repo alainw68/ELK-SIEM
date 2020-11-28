@@ -95,7 +95,7 @@ The ELK stack requires Java 8 to be installed. Some components are compatible wi
 - Open a Terminal or SSH connection and login and type this commands.
 
 ~~~
-sudo apt-get update && apt-get upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y
 ~~~ 
 
 - Once that is done perform a Distro upgrade to finish last few upgrades.
