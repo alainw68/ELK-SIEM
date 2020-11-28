@@ -122,7 +122,7 @@ sudo ./elasticsearch-setup-passwords auto
 sudo nano /etc/kibana/kibana.yml
 ~~~
 
-- Now look for this field and add your password for this account:
+- Now look for this field and un-comment the values and add your password for this account:
 
 ~~~
 elasticsearch.username: "kibana_system"
