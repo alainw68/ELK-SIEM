@@ -58,7 +58,7 @@ Look for you interface name mines was **enp1s0** and change you values to match 
 sudo nano 00-installer-config.yaml
 ~~~
 
-- Just modify the content with your data:
+- Just copy and modify the contents with your data below, then paste it back in:
 
 ~~~
 network:
