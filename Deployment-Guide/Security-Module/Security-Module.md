@@ -17,7 +17,7 @@ ls
 - Now execute elasticsearch-certutil and create a --pem file:
 
 ~~~
-bin/elasticsearch-certutil ca --pem
+sudo bin/elasticsearch-certutil ca --pem
 ~~~
 
 This will prompt you to create the Certificate zip file. You can leave it to the defaults. We will rename the cert later!
