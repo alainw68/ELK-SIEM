@@ -49,6 +49,20 @@ sudo mv ca /
 cd /
 ~~~
 
+At this point once the cert has been unzipped you can change the name by copying the file into another file.
+
+- Example:
+
+~~~
+sudo cp ca.crt mycertname.crt
+sudo cp ca.key mycertname.key
+~~~
+
+This is just to change the name from default if you want to.
+
+Note: You must change the values to match the location path of the certs.
+
+
 Now lets edit the Kibana.yml file:
 
 ~~~
@@ -67,18 +81,6 @@ xpack.security.enabled: true
 sudo systemctl restart kibana
 ~~~
 
-At this point once the cert has been unzipped you can change the name by copying the file into another file.
-
-- Example:
-
-~~~
-sudo cp ca.crt mycertname.crt
-sudo cp ca.key mycertname.key
-~~~
-
-This is just to change the name from default if you want to.
-
-Note: You must change the values to match the location path of the certs.
 
 - Lets go back and edit this file again:
 ~~~
