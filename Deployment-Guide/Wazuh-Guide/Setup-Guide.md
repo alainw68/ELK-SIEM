@@ -56,5 +56,11 @@ password: admin
 12. Then click on Map
 
 New admin user has been created!
-### The following video explains how to import and run the virtual machine.:
-- https://www.youtube.com/watch?v=uijZuneDPPk
+
+# Conclusion
+
+We now have our working Wazuh system setup so that we can start our journey and ingest data from different end points like I did.
+
+### Congratulations You Did IT!
+
+#Enjoy!
