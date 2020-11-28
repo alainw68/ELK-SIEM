@@ -157,7 +157,7 @@ sudo apt-get update -y
 - Install Elasticsearch with the following command:
 
 ~~~
-sudo apt-get update && sudo apt-get install elasticsearch -y
+sudo apt-get install elasticsearch -y
 ~~~
 
 - Do a systemctl daemon reload.
